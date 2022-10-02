@@ -2,18 +2,18 @@ var input=document.querySelector('#input');
 var buttonIncrease=document.querySelector('#increase');
 var buttonDecrease=document.querySelector('#decrease');
 var output=document.querySelector('#output');
-var size=16;
+var size=12;
 
 function increaseSize()
 {
    var textIncrease=document.getElementById('input').style.fontSize=size+'2px';
-    output.innerText=textIncrease;
+    // output.innerText=textIncrease;
 
 }
 function decreaseSize()
 {
     var textDecrease=document.getElementById('input').style.fontSize=size-'2px';
-    output.innerText=textDecrease;
+    // output.innerText=textDecrease;
     // font--;
 
 }
