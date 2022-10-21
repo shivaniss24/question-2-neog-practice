@@ -1,31 +1,26 @@
 var input=document.querySelector('#input');
-var buttonIncrease=document.querySelector('#increase');
-var buttonDecrease=document.querySelector('#decrease');
+var increase=document.querySelector('#increase');
+var decrease=document.querySelector('#decrease');
 var output=document.querySelector('#output');
-var size=12;
 
-function increaseSize()
+function fontIncrease()
 {
-   var textIncrease=document.getElementById('input').style.fontSize=size+'2px';
-    // output.innerText=textIncrease;
-
+    var fontSize=window.getComputedStyle(output).fontSize;
+    var currentSize=parseFloat(fontSize)
+    output.style.fontSize=`${currentSize+2}px`;
 }
-function decreaseSize()
+
+function fontDecrease()
 {
-    var textDecrease=document.getElementById('input').style.fontSize=size-'2px';
-    // output.innerText=textDecrease;
-    // font--;
-
+    var fontSize=window.getComputedStyle(output).fontSize;
+    var currentSize=parseFloat(fontSize)
+    output.style.fontSize=`${currentSize-2}px`;
 }
+
 function showOp()
 {
-    output.innerText=input.value;
+output.innerText=input.value
 }
-input.addEventListener('input',showOp);
-buttonIncrease.addEventListener('click',increaseSize);
-buttonDecrease.addEventListener('click',decreaseSize);
-
-
-
-
-
+input.addEventListener('keyup',showOp);
+increase.addEventListener('click',fontIncrease);
+decrease.addEventListener('click',fontDecrease);
